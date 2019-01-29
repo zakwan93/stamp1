@@ -5,6 +5,8 @@ body{
 	position: absolute;
 	color: #fff;
 	font-size: 24px;
+    height: 100%;
+    width: 100%;
 }
 .layer {
     background-color: black;
@@ -300,6 +302,26 @@ input[type="password"]{
       100%  { left: 0; opacity: 1}
 }
 
+@media screen and (max-width: 320px){
+
+  body .section_title, html .section_title{
+    margin-top: 40px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px){
+  body .section_content, html .section_content{
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 414px){
+  body .section_title, html .section_title{
+    margin-top: 40px;
+  }
+}
+
 
 @media screen and (max-width: 800px){
 
@@ -393,10 +415,13 @@ input[type="password"]{
     }
 }
 
+
 @media screen and (max-width: 500px){
+
     .footer{
         display: block;
         align-items: center;
+        position: relative;
 
     }
     .footer .footer_copyright{
@@ -413,5 +438,10 @@ input[type="password"]{
         padding-left: 15px;
         font-size: 12px;
     }
+
+    section{
+        margin-bottom: 100px;
+    }
 }
+
 
