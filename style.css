@@ -5,8 +5,8 @@ body{
 	position: absolute;
 	color: #fff;
 	font-size: 24px;
-    height: 100%;
-    width: 100%;
+      height: 100%;
+      width: 100%;
 }
 .layer {
     background-color: black;
@@ -64,8 +64,8 @@ body{
 
 .hammenu{
 	position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 27px;
+    right: 10px;
     height: 60px;
     width: 60px;
     display: none;
@@ -87,10 +87,6 @@ section{
 .left p{
 	font-size: 18px;
 	color: #C0C0C0;
-}
-
-.right{
-    /*opacity: 0;*/
 }
 
 .slide {
@@ -168,9 +164,9 @@ body .section_content, html .section_content {
 	border-bottom: none;
 }
 input {
-	width: 95%;
-	height: 40px;
-  	background: transparent;
+    width: 95%;
+    height: 40px;
+    background: transparent;
     border: none;
     border-bottom: solid 1px #F5F5F5;
     border-width: thin;
@@ -186,18 +182,17 @@ input[type="password"]{
   	color: lightgray;
 }
 
-.errspan {
-        float: right;
-        margin-right: 6px;
-        margin-top: -30px;
-        position: relative;
-        z-index: 2;
-        color: gray;
+.errspan{
+      float: right;
+      margin-right: 6px;
+      margin-top: -30px;
+      position: relative;
+      z-index: 2;
+      color: gray;
 }
 
-
- button{
- 	width: 100%;
+button {
+      width: 100%;
 	height: 60px;
 	background-color: #428bca;
 	color: white;
@@ -206,7 +201,6 @@ input[type="password"]{
  }
 
 .footer{
-    /*margin: 100px 80px;*/
     margin-bottom: 0px;
     display: flex;
     justify-content: space-between;
@@ -242,7 +236,6 @@ input[type="password"]{
     margin: 0 15px;
     margin-right: 0%;
     padding-right: 5px;
-    /*outline: 0;*/
     font-size: 12px;
 }
 
@@ -250,6 +243,8 @@ input[type="password"]{
     text-decoration: underline;
     letter-spacing: 5px;
 }
+
+/*All Keyframes*/
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -302,55 +297,46 @@ input[type="password"]{
       100%  { left: 0; opacity: 1}
 }
 
-@media screen and (max-width: 320px){
+/*Media Queries*/
 
-  body .section_title, html .section_title{
-    margin-top: 40px;
-    font-size: 12px;
-  }
+@media screen and (max-width: 320px)
+{
+    .section_content p{
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
 }
 
-@media screen and (max-width: 375px){
-  body .section_content, html .section_content{
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (max-width: 414px){
-  body .section_title, html .section_title{
-    margin-top: 40px;
-  }
-}
-
-
-@media screen and (max-width: 800px){
+@media screen and (max-width: 750px){
 
     .left{
     	display: inline-block;
-    	width: 80%;
-    	padding-bottom: 10%;
+    	width: 50%;
+    	padding-bottom: 8%;
     }
 
     body .section, html .section {
-    	padding-right: 15%;
+    	padding-right: 10%;
     }
 
     body .section_title, html .section_title {
     	margin-right: 0px;
     	height: 100%;
     	width: 100%;
-    	font-size: 24px;
+    	font-size: 14px;
     	padding-bottom: 0%;
     	padding-top: 5%;
+        margin-top: 40px;
+        padding-left: 0px;
     }
 
-    .left p, .left p{
+    .left p{
    		font-size: 12px;
     }
 
 
  	body .section_content, html .section_content {
- 		margin-left: 14%;
+ 		margin-left: 13%;
  		opacity: 0.8;
  		display: flex;
   		flex-direction: column;
@@ -361,7 +347,8 @@ input[type="password"]{
  	}
 
  	button, .from{
- 	width: 100%;
+     	width: 100%;
+        height: 40px;
  	}	
 
     body .section, html .section {
@@ -375,6 +362,7 @@ input[type="password"]{
 	.hammenu{	 
   		 display: inline-block;
 	}
+
 	.dropdown-content.show {
 		display: block;
 		margin:0px;
@@ -385,11 +373,10 @@ input[type="password"]{
 	  display: none;
 	  position: relative;
 	  background-color: #202020;
-      opacity: 0.5;
+      opacity: 0.9;
 	  min-width: 160px;
 	  overflow: auto;
-      font-size: 14 px;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      font-size: 14px;
 	  z-index: 1;
 	}
 
@@ -405,7 +392,15 @@ input[type="password"]{
         margin-left: 5px;
         margin-right: 5px;
         padding: 0;
-        display: inline-flex;
+        display: block;
+    }
+    .footer_links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
     .footer_links a{
         padding-bottom: 10px;
@@ -413,35 +408,9 @@ input[type="password"]{
         font-size: 10px;
         letter-spacing: 0px;
     }
-}
-
-
-@media screen and (max-width: 500px){
-
-    .footer{
-        display: block;
-        align-items: center;
-        position: relative;
-
-    }
-    .footer .footer_copyright{
-        display: block;
-        /*margin-right: 10%;*/
+    .footer_copyright {
+        width: auto;
         text-align: center;
-        vertical-align: middle;    }
-    }
-    .footer .footer_links {
-        display: block;
-        /*margin-right: 10%;*/
-        text-align: center;
-        vertical-align: middle; 
-        padding-left: 15px;
-        font-size: 12px;
     }
 
-    section{
-        margin-bottom: 100px;
-    }
 }
-
-
